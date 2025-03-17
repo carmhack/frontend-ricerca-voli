@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     async function loadDestinations() {
         try {
-            const response = await fetch("/api/data");
+            const response = await fetch("https://backend-ricerca-voli.up.railway.app/api/data");
             const data = await response.json();
             flightsData = data;
             destinations = [...new Set(data.map(flight => flight.destination))];
