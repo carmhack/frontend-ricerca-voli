@@ -1,0 +1,177 @@
+/* Stile generale */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fffbf0;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  background: #ffcc00;
+  padding: 20px;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+  
+  .subtitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .author {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+    a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 3px solid black;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      background: yellow;
+      border-bottom: 3px solid yellow;
+    }
+  }
+}
+
+/* Ricerca */
+.search-container {
+  background: #ffffff;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  padding: 20px;
+  display: inline-block;
+  text-align: left;
+
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 3px solid black;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  #autocompleteList {
+    display: none;
+    margin-top: 20px;
+    background: white;
+    border: 3px solid black;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 4px 4px 0px black;
+  }
+  
+  #autocompleteList .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+  }
+  
+  #autocompleteList .dropdown-item:hover {
+    background: yellow;
+  }
+}
+
+/* Sezione risultati */
+#flightsContainer {
+  margin-top: 20px;
+}
+
+.flight-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Stile filtri */
+.filters {
+  background: white;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  padding: 20px;
+  margin-top: 20px;
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 3px solid black;
+    background: #ffcc00;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .filter-btn.is-active {
+    background: black;
+    color: white;
+  }
+}
+
+/* Card voli */
+.flight-card {
+  background: white;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  padding: 20px;
+  width: 300px;
+  margin: 10px;
+  text-align: left;
+
+  .flight-header {
+    background: #ffcc00;
+    padding: 20px;
+    border: 4px solid black;
+    box-shadow: 6px 6px 0px black;
+    margin-bottom: 20px;
+  }
+
+  .flight-title {
+    font-size: 20px;
+  }
+  
+  .flight-footer {
+    border-top: 1px solid black;
+    margin-top: 20px;
+  }
+  
+  .flight-card p {
+    margin: 5px 0;
+  }
+}
+
+.no-results {
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: white;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  font-size: 14px;
+}

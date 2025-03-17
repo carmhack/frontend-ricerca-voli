@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca Voli - Aeroporto di Salerno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ricerca Voli - Aeroporto di Salerno</h1>
+        <p class="subtitle">
+            Trova il tuo volo e controlla la disponibilità.
+        </p>
+        <p class="author">Creato da <a href="https://www.linkedin.com/in/adriano-grimaldi/" target="_blank">Adriano Grimaldi</a></p>
+    </header>
+
+    <main>
+        <!-- Campo di ricerca -->
+        <div class="search-container">
+            <label for="searchInput">Destinazione</label>
+            <input type="text" id="searchInput" placeholder="Digita una destinazione..." autocomplete="off">
+            <div id="autocompleteList"></div>
+        </div>
+
+        <!-- Sezione risultati -->
+        <div id="flightsContainer">
+            <!-- 📌 Sezione Filtri -->
+            <div id="filtersSection" class="filters" style="display: none;">
+                <h3>Filtra per mese</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-month="1">Gennaio</button>
+                    <button class="filter-btn" data-month="2">Febbraio</button>
+                    <button class="filter-btn" data-month="3">Marzo</button>
+                    <button class="filter-btn" data-month="4">Aprile</button>
+                    <button class="filter-btn" data-month="5">Maggio</button>
+                    <button class="filter-btn" data-month="6">Giugno</button>
+                    <button class="filter-btn" data-month="7">Luglio</button>
+                    <button class="filter-btn" data-month="8">Agosto</button>
+                    <button class="filter-btn" data-month="9">Settembre</button>
+                    <button class="filter-btn" data-month="10">Ottobre</button>
+                    <button class="filter-btn" data-month="11">Novembre</button>
+                    <button class="filter-btn" data-month="12">Dicembre</button>
+                </div>
+            </div>
+
+            <h2 class="subtitle" style="display: none;">Voli disponibili</h2>
+
+            <div id="flightsList" class="flight-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>⚠️ I dati mostrati in questa app sono letti da fonti pubbliche e potrebbero non essere aggiornati in tempo reale.  
+        Verifica sempre le informazioni sui siti ufficiali delle compagnie aeree.</p>
+        <p>📌 Questa applicazione non è affiliata a nessuna compagnia aerea e non intende violare copyright o diritti di terzi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
