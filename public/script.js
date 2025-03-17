@@ -108,20 +108,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         filteredFlights.forEach(flight => {
             let periodText = "";
-            let monthFilter = [];
+            let flightMonths = new Set();
 
             if (flight.period.single) {
                 let singleDate = formatDate(flight.period.single);
                 periodText = `Attivo il ${singleDate.text}`;
-                monthFilter.push(singleDate.month);
+                flightMonths.add(singleDate.month);
             } else {
                 let fromDate = formatDate(flight.period.from);
                 let toDate = formatDate(flight.period.to);
                 periodText = `dal ${fromDate.text} al ${toDate.text}`;
-                monthFilter.push(fromDate.month, toDate.month);
+                for (let m = fromDate.month; m <= toDate.month; m++) {
+                    flightMonths.add(m);
+                }
             }
 
-            if (selectedMonths.size > 0 && !monthFilter.some(month => selectedMonths.has(month))) {
+            if (selectedMonths.size > 0 && ![...selectedMonths].some(month => flightMonths.has(month))) {
                 return;
             }
 
